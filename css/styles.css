@@ -7,9 +7,11 @@
 }
 
 main {
+    /*width: 100vw;*/
     width: 100%;
-    height: 100vw; /*para que ocupe todo el alto*/
+    height: 100vh; /*para que ocupe todo el alto*/
     background-color:lightblue;
+    overflow: hidden;
 }
 
 
@@ -19,17 +21,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0; /* Color de fondo claro */
-
-}
+    }
 
 
 header {
     background-color: #09c8ef;
     color: white;
     padding: 10px 20px;
+    margin-bottom: auto;
 }
 
 .logo-container {
+    padding: auto;
     display: flex; /* Usar flexbox para alinear el logo y el h1 */
     align-items: center; /* Centrar verticalmente */
     justify-content: center;
@@ -52,7 +55,22 @@ h1 {
     flex-grow: 1; /* Permitir que el h1 ocupe el espacio restante */
     }
 
+h2 {
+    margin: 10px; /* Quitar el margen del h2 */
+    font-size: 20px; /* Tamaño del texto del h2 */
+    text-align: center; /* Asegurarse de que el texto esté centrado */
+    flex-grow: 1; /* Permitir que el h2 ocupe el espacio restante */
+    }
+    
 
+
+.logo {
+    transition: transform 0.3s ease; /* Suaviza la transición */
+}
+
+.logo:hover {
+    transform: scale(1.5); /* Aumenta el tamaño de la imagen al 120% */
+    }
 
 .whatsapp-icon {
     margin-left: 10px; /* Espaciado entre el h1 y el ícono de WhatsApp */
@@ -80,12 +98,14 @@ nav ul {
     list-style: none; /* Quitar los puntos de la lista */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
 }
 
 nav ul li {
 /*    display: inline;
     margin-right: 15px;*/
   flex: 1; /* Hacer que los elementos del menú ocupen el mismo espacio */
+  margin: 10px; /* Espacio entre los elementos */
 }
 
 nav a {
@@ -104,12 +124,27 @@ section {
 }
 
 
-.reseña {
+#resenias {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en varias líneas */
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.titulo-resenia {
     background:lightskyblue;
     color:#ab860b;
-    margin: 10px 0;
+}
+
+.resenia {
+    flex: 1 1 calc (25% - 20px);
+    background:lightskyblue;
+    color:#ab860b;*/
+    margin-top: 15px;
+    margin-bottom: 20px; /* Espacio inferior */
     padding: 15px;
     border-radius: 8px;
+    border-color: dodgerblue;
+    box-sizing: border-box;
 }
 
 .stars {
@@ -117,6 +152,7 @@ section {
 }
 
 footer {
+    margin-top: 20px; /* para que no se encime*/
     background-color: lightgray;
     color:#ab860b;
     text-align: center;
@@ -128,22 +164,23 @@ footer {
 #productos {
     background-color: #f4f4f4;
     display: flex;  /* Activa el modelo de caja flexible (Flexbox)  */
-    flex-wrap: wrap;
+    flex-wrap: wrap; /*para que baje cuando sea necesario*/
     justify-content: space-around;
+    font-size:small;
 }
 
 .card {
     background:lightblue;
     color:#ab860b;
-    margin: 10px;
-    padding: 15px;
-    border-radius: 8px;
+    margin: 4px;
+    padding:10px;
+    border-radius: 4px;
     flex: 1 1 30%; /* Ajusta el tamaño de las cards */
 }
 
 .card label {
     display: block; /* Hacer que las etiquetas se muestren en bloque */
-    margin: 10px 0 5px; /* Espaciado entre etiquetas y campos */
+    margin: 5px 0 3px; /* Espaciado entre etiquetas y campos */
     font-weight: bold; /* Hacer las etiquetas más visibles */
 }
 
@@ -156,15 +193,28 @@ footer {
     border-radius: 4px; /* Bordes redondeados */
 }
 
-#reseñas {
+
+#resenias {
     padding: 20px;
     background-color:lightgray;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    /*grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));*/
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas por defecto */
     gap: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan */
+    
 }
 
 
+.form_contacto{
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en columna */
+    max-width: 80%; /* Ancho máximo del formulario */
+    margin: 20px auto; /* Centra el formulario con margen */
+    padding: 20px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde opcional */
+    border-radius: 5px; /* Bordes redondeados */
+}
 
 .form-group {
     margin-bottom: 15px; /* Espaciado entre los grupos de formulario */
@@ -197,15 +247,31 @@ button {
     border: none; /* Sin borde */
     border-radius: 4px; /* Bordes redondeados */
     cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    max-width: 100px;  /* Ancho maximo */
+    margin-top: 10px; /* Margen superior para que se separa */
+
 }
 
 button:hover {
     background-color: #007bb5; /* Color de fondo al pasar el mouse */
 }
 
+
 /* Estilos responsivos */
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
     }
+    
+    main {
+        width: 100vw; /*para que ocupe todo el ancho*/
+        height: 200vh; /*para que ocupe mas largo*/
+        min-height: 100vh; /*para que ocupe todo el alto*/
+        overflow: hidden; /* para que no muestre lo que no entra*/
+    }
+
+    #resenias {
+        grid-template-columns: 1fr; /* 1 columna en dispositivos móviles */
+    }
+    
 }
