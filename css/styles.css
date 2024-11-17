@@ -98,7 +98,7 @@ nav ul {
     list-style: none; /* Quitar los puntos de la lista */
     padding: 0; /* Quitar el padding */
     margin: 0; /* Quitar el margin */
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
+    /*flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea */
 }
 
 nav ul li {
@@ -138,7 +138,7 @@ section {
 .resenia {
     flex: 1 1 calc (25% - 20px);
     background:lightskyblue;
-    color:#ab860b;*/
+    color:#ab860b;
     margin-top: 15px;
     margin-bottom: 20px; /* Espacio inferior */
     padding: 15px;
@@ -164,7 +164,7 @@ footer {
 #productos {
     background-color: #f4f4f4;
     display: flex;  /* Activa el modelo de caja flexible (Flexbox)  */
-    flex-wrap: wrap; /*para que baje cuando sea necesario*/
+    flex-wrap: wrap; /*para que baje cuando sea necesario lo saque y sigue funcionando*/
     justify-content: space-around;
     font-size:small;
 }
@@ -265,7 +265,7 @@ button:hover {
     
     main {
         width: 100vw; /*para que ocupe todo el ancho*/
-        height: 200vh; /*para que ocupe mas largo*/
+        height: 300vh; /*para que ocupe mas largo*/
         min-height: 100vh; /*para que ocupe todo el alto*/
         overflow: hidden; /* para que no muestre lo que no entra*/
     }
@@ -273,5 +273,18 @@ button:hover {
     #resenias {
         grid-template-columns: 1fr; /* 1 columna en dispositivos móviles */
     }
+
     
+    #productos {
+        flex: 1 1 100%; /* En pantallas pequeñas, ocupa el 100% del ancho */
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    }
+    .card {
+        background:darkviolet;
+        color:#ab860b;
+        margin: 2px;
+        padding: 5px;
+        border-radius: 2px;
+        flex: 1 50%; /* Ajusta el tamaño de las cards */
+    }
 }
