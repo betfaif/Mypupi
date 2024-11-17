@@ -173,26 +173,34 @@ footer {
     background:lightblue;
     color:#ab860b;
     margin: 4px;
-    padding:10px;
+    padding:4px;
     border-radius: 4px;
     flex: 1 1 30%; /* Ajusta el tamaño de las cards */
 }
 
+.card-content {
+    display: flex; /* Usamos flexbox para alinear los elementos */
+    align-items: center; /* Alinea verticalmente al centro */
+}
+
 .card label {
     display: block; /* Hacer que las etiquetas se muestren en bloque */
-    margin: 5px 0 3px; /* Espaciado entre etiquetas y campos */
+    margin: 2px 0 2px; /* Espaciado entre etiquetas y campos */
     font-weight: bold; /* Hacer las etiquetas más visibles */
 }
 
 .card input[type="text"],
 .card input[type="number"] {
     width: 100%; /* Hacer que los campos ocupen todo el ancho */
-    padding: 8px; /* Espaciado interno */
-    margin-bottom: 10px; /* Espacio inferior */
+    padding: 2px; /* Espaciado interno */
+    margin-bottom: 6px; /* Espacio inferior */
     border: 1px solid #ccc; /* Bordes de los campos */
     border-radius: 4px; /* Bordes redondeados */
 }
-
+.card img {
+    width: 30%; /* Imagen ocupa un determinado %*/
+    height: auto; /* Mantiene la proporción de la imagen */
+}
 
 #resenias {
     padding: 20px;
