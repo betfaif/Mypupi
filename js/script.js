@@ -44,7 +44,9 @@ function validarFormulario(event) {
   //      form.submit();
     //}
 
-    document.addEventListener("DOMContentLoaded", () => {
+    //document.addEventListener("DOMContentLoaded", () => { cambiado por productos
+    // cuando carga el DOM ya que cargue los productos
+        document.addEventListener("DOMContentLoaded", cargarProductos() => {
         const form = document.getElementById('formularioContacto');
         
         form.addEventListener("submit", async (event) => {
@@ -79,6 +81,5 @@ function validarFormulario(event) {
     });
     
     
-
 
 

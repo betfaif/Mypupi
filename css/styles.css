@@ -197,6 +197,11 @@ footer {
     height: auto; /* Mantiene la proporción de la imagen */
     margin-left: 10rem;    
 }
+.agregar {
+    margin-top: 2px;
+    margin-left: 12rem;
+}
+
 
 #resenias {
     padding: 20px;
