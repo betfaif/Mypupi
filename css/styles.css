@@ -267,6 +267,13 @@ button {
 
 }
 
+
+ul{
+    list-style: none; /* Quitar los puntos de la lista */
+    
+}
+
+
 button:hover {
     background-color: #007bb5; /* Color de fondo al pasar el mouse */
 }
