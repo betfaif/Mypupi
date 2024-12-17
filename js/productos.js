@@ -65,7 +65,7 @@ const crearHTML = (item) => {
       const { nombre, precio } = elemento;
 
       // Creo el objeto producto para insertar en el carrito
-      const agregarproducto = {
+      const producto = {
         id: id,
         nombre: nombre,
         precio: precio,
@@ -75,9 +75,9 @@ const crearHTML = (item) => {
       // let { cantidad } = producto;
       // console.log(cantidad);
 
-      carrito.push(agregarproducto);
+      carrito.push(producto);
     } else {
-      const agregarproducto = carrito[index];
+      const producto = carrito[index];
       producto.cantidad++;
     }
 
