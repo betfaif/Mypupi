@@ -1,3 +1,4 @@
+let arrayProductos=[] // bettina
 const crearHTML = (item) => {
         const html = `
             <article data-id="${item.id}">
@@ -14,6 +15,7 @@ const crearHTML = (item) => {
   };
  
   const mostrarProductos = async () => {
+//    let arrayProductos=[] // bettina
     try {
       const response = await  fetch('productos.json');
       // console.log(response);
@@ -43,7 +45,7 @@ const crearHTML = (item) => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   // console.log(carrito);
   //mostrarProductos();
-  let arrayProductos=[] // bettina
+  //let arrayProductos=[] // bettina
   // Escucho todos los eventos click el documento
   document.addEventListener("click", (event) => {
   // Si el elemento donde se hizo click contiene la clase 'agregar'
@@ -60,8 +62,7 @@ const crearHTML = (item) => {
       const elemento = arrayProductos.find((producto) => producto.id == id);
       console.log(elemento);
       console.log(arrayProductos[2]);
-      console.log(producto)
-
+  
       // Uso destructuring para creo las constante con los valores del Objeto
       const { nombre, precio } = elemento;
 
