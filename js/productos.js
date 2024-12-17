@@ -16,32 +16,34 @@ const crearHTML = (item) => {
   const mostrarProductos = async () => {
     try {
       const response = await  fetch('productos.json');
-      console.log(response);
-      const array = await response.json();
+      // console.log(response);
+      const arrayProductos = await response.json();
   
-      console.log(array);
+      console.log(arrayProductos);
     
       // busca en dom elemento con la clase listado-productos
       const listadoProductos = document.querySelector(".listado-productos"); 
 
       listadoProductos.innerHTML = "";
 
-      array.forEach((item) => {
+      arrayProductos.forEach((item) => {
 
         const elementos = crearHTML(item);
-        //   console.log(elementos);
-        listadoProductos.innerHTML += elementos;
+        // console.log(elementos); 
+        listadoProductos.innerHTML += elementos; 
+
       });
     } catch (error) {
       console.error(error);
     }
   };
-  
+
+
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   // console.log(carrito);
-  mostrarProductos();
-
-  / Escucho todos los eventos click el documento
+  //mostrarProductos();
+  arrayProductos=[] // bettina
+  // Escucho todos los eventos click el documento
   document.addEventListener("click", (event) => {
   // Si el elemento donde se hizo click contiene la clase 'agregar'
   if (event.target.classList.contains("agregar")) {
@@ -53,8 +55,11 @@ const crearHTML = (item) => {
 
     if (index == -1) {
       // Busco el elemento 'producto' dentro del array producto que tenga el 'id'
-      const elemento = productos.find((producto) => producto.id == id);
+      console.log(arrayProductos)
+      const elemento = arrayProductos.find((producto) => producto.id == id);
       console.log(elemento);
+      console.log(arrayProductos[2]);
+      console.log(producto)
 
       // Uso destructuring para creo las constante con los valores del Objeto
       const { nombre, precio } = elemento;
@@ -81,4 +86,4 @@ const crearHTML = (item) => {
   }
 });
 
-  
+mostrarProductos()
