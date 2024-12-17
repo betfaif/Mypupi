@@ -161,7 +161,8 @@ footer {
 
 
 
-#productos {
+/*#productos {*/
+#sect-productos {
     background-color: #f4f4f4;
     display: flex;  /* Activa el modelo de caja flexible (Flexbox)  */
     flex-wrap: wrap; /*para que baje cuando sea necesario lo saque y sigue funcionando*/
@@ -175,16 +176,18 @@ footer {
     margin: 4px;
     padding:4px;
     border-radius: 4px;
-    flex: 1 1 30%; /* Ajusta el tamaño de las cards */
+    /*flex: 1 1 30%; /* Ajusta el tamaño de las cards */
+    width: 40em;
 }
 
 .card label {
     display: block; /* Hacer que las etiquetas se muestren en bloque */
     margin: 2px 0 2px; /* Espaciado entre etiquetas y campos */
     font-weight: bold; /* Hacer las etiquetas más visibles */
+    /*agregado*/
+    width: 100%; /* Hacer que los campos ocupen todo el ancho */
 }
 
-.card input[type="text"],
 .card input[type="number"] {
     width: 100%; /* Hacer que los campos ocupen todo el ancho */
     padding: 2px; /* Espaciado interno */
@@ -192,6 +195,7 @@ footer {
     border: 1px solid #ccc; /* Bordes de los campos */
     border-radius: 4px; /* Bordes redondeados */
 }
+
 .card img {
     width: 30%; /* Imagen ocupa un determinado %*/
     height: auto; /* Mantiene la proporción de la imagen */
@@ -200,6 +204,8 @@ footer {
 .agregar {
     margin-top: 2px;
     margin-left: 12rem;
+    width: auto;
+    color: coral;
 }
 
 
@@ -289,7 +295,8 @@ button:hover {
         flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
     }
     .card {
-        background:darkviolet;
+        background:lightblue;
+        /*background:darkviolet;*/
         color:#ab860b;
         margin: 2px;
         padding: 5px;

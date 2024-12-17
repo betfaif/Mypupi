@@ -18,7 +18,7 @@
 {
 "id": 3,
 "nombre": "Peluche con chifle",
-"descripcion": "Peluche de plush con chifle. No toxico. Apto perros pequeños",
+"descripcion": "Peluche de plush con chifle. No toxico. Apto perros pequeños ",
 "imagen": "img/producto3.webp",
 "precio": 900,
 "cantidad": 0
@@ -26,7 +26,7 @@
 {
 "id": 4,
 "nombre": "Pelota mordillo porta alimento",
-"descripcion": "funciona como mordillo y porta alimento o golosinas . Plastico resistente. Diametro 6 cm",
+"descripcion": "funciona como mordillo y porta alimento o golosinas . Plastico resistente. Diametro 6 cm ",
 "imagen": "img/producto4.webp",
 "precio": 1400,
 "cantidad": 0
@@ -34,7 +34,7 @@
 {
 "id": 5,
 "nombre": "Pelota masticable resistente",
-"descripcion": "De caucho super referozada . Diamentro 6.5 cm",
+"descripcion": "De caucho super referozada . Diamentro 6.5 cm ",
 "imagen": "img/producto5.webp",
 "precio": 1500,
 "cantidad": 0
