@@ -17,8 +17,9 @@ const crearHTML = (item) => {
     try {
       const response = await  fetch('productos.json');
       // console.log(response);
-      const arrayProductos = await response.json();
-  
+      //const arrayProductos = await response.json();
+      // le saque el const
+      arrayProductos = await response.json();
       console.log(arrayProductos);
     
       // busca en dom elemento con la clase listado-productos
@@ -42,7 +43,7 @@ const crearHTML = (item) => {
   carrito = JSON.parse(localStorage.getItem("carrito")) || [];
   // console.log(carrito);
   //mostrarProductos();
-  arrayProductos=[] // bettina
+  let arrayProductos=[] // bettina
   // Escucho todos los eventos click el documento
   document.addEventListener("click", (event) => {
   // Si el elemento donde se hizo click contiene la clase 'agregar'
